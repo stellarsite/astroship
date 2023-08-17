@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Cta from "@components/cta.astro";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+<Layout title="Solutions">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Our Solutions</Fragment>
+      <Fragment slot="desc">Explore the AI-driven automation solutions that power your growth.</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">Customer Support Chatbots</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Provide 24/7 client support with chatbots trained on custom knowledge. Enhance efficiency and free up human agents for other tasks.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">Workflow Automations</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Reduce human errors and save time with AI-driven workflow automations. Streamline onboarding, data extraction, and CRM updates.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">Customized Solutions</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Tailored AI solutions designed to meet the unique requirements of various industries, including rental real estate, startups, and more.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">AI-Driven Efficiency</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Utilize smart tools like ChatGPT for tasks such as summarizing data, responding to payments, and preparing contracts. Optimize, automate, and elevate your business processes.
+      </p>
+    </div>
+
+    <Cta/>
+  </Container>
+</Layout>

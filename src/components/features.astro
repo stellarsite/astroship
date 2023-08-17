@@ -4,51 +4,50 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Customer Support Chatbots",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "24/7 client support chatbots trained on custom knowledge, providing efficient support and freeing up human agents for other tasks.",
+    icon: "bx:bxs-message",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Workflow Automations",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Reduce human errors and save time with AI-driven workflow automations, including onboarding, data extraction, and CRM updates.",
+    icon: "bx:bxs-cog",
   },
   {
-    title: "On-Demand Components",
+    title: "Customized Solutions",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "From rental real estate to startups, our tailored AI solutions are designed to meet the unique requirements of various industries.",
+    icon: "bx:bxs-customize",
   },
   {
-    title: "Broad Integration",
+    title: "Experienced Team",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      "With over 30 years of experience in fintech, crypto startups, design agencies, and more, our team of tech experts is ready to help.",
+    icon: "bx:bxs-group",
+  },
+  {
+    title: "Strategic Partnership",
+    description:
+      "We're not just a service provider; we're your business partner. We build tools that truly understand and elevate your business.",
+    icon: "ic:round-handshake",
+  },
+  {
+    title: "AI-Driven Efficiency",
+    description:
+      "Utilize smart tools like ChatGPT for tasks such as summarizing data, responding to payments, and preparing contracts.",
     icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    AI Automation Agency - Transform Your Business
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Empower your operations with intelligent automations. From customer support to workflow management, our solutions are crafted to streamline your business processes.
   </p>
 </div>
 
@@ -56,11 +55,11 @@ const features = [
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <h3 class="font-semibold text-lg">{item.title}</h3>
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>

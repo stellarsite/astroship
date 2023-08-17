@@ -18,8 +18,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Efficiency Era"
+  : "Efficiency Era - Revolutionize Your Business with AI Automation";
 ---
 
 <!DOCTYPE html>
@@ -33,22 +33,22 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Efficiency Era offers AI-driven automation solutions for medium to large businesses, elevating productivity and creating a new wave of efficiency."
       canonical={canonicalURL}
       twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+        creator: "@EfficiencyEra",
+        site: "@EfficiencyEra",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
-          image: resolvedImageWithDomain,
+          title: `Efficiency Era - Revolutionize Your Business`,
+          image: resolvedImageWithDomain, // Make sure to update this with the URL of an appropriate image for Efficiency Era
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Efficiency Era - Transforming Businesses with AI Automation",
         },
       }}
     />

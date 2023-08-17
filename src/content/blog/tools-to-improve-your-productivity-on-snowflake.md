@@ -8,7 +8,7 @@ image: {
 }
 publishDate: "2023-08-16 11:39"
 category: "Data Innovation"
-author: "Seamus Hazel"
+author: "Efficiency Era Team"
 tags: [data-management, Snowflake, automation, productivity]
 ---
 

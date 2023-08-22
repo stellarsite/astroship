@@ -25,46 +25,51 @@ const makeTitle = title
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQ2752DBQF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SQ2752DBQF');
+  </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQ2752DBQF"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-SQ2752DBQF");
-    </script>
-
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
-      title={makeTitle}
-      description="Efficiency Era offers AI-driven automation solutions for medium to large businesses, elevating productivity and creating a new wave of efficiency."
-      canonical={canonicalURL}
-      twitter={{
-        creator: "@EfficiencyEra",
-        site: "@EfficiencyEra",
-        card: "summary_large_image",
-      }}
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `Efficiency Era - Revolutionize Your Business`,
-          image: resolvedImageWithDomain, // Make sure to update this with the URL of an appropriate image for Efficiency Era
-        },
-        image: {
-          alt: "Efficiency Era - Transforming Businesses with AI Automation",
-        },
-      }}
-    />
+    title={makeTitle || "Efficiency Era - Unleashing Efficiency with Intelligent AI Automations"}
+    description="Efficiency Era offers AI-driven automation solutions for businesses in all industries, elevating productivity and creating massive gains in efficiency."
+    canonical={canonicalURL}
+    keywords="AI Automation, Workflow Automation, Intelligent Automation, Business Efficiency, Toronto AI Agency, Process Automation, Robotic Process Automation (RPA), AI-Driven Business Transformation, AI Technology Solutions, AI-Powered Workflow Management"
+    locale="en_CA" // English, Canada
+    author="Efficiency Era" // If applicable
+    geo={{
+      region: "ON", // Ontario
+      country: "Canada",
+      placename: "Toronto",
+    }}
+    twitter={{
+      creator: "@EfficiencyEra",
+      site: "@EfficiencyEra",
+      card: "summary_large_image",
+    }}
+    openGraph={{
+      basic: {
+        url: canonicalURL,
+        type: "website",
+        title: `Efficiency Era - Unleashing Efficiency with Intelligent AI Automations`,
+        image: resolvedImageWithDomain || defaultImageURL,
+      },
+      image: {
+        alt: "Efficiency Era - Transforming Businesses with AI Automation",
+      },
+    }}
+  />
+  
   </head>
   <body>
     <Navbar />

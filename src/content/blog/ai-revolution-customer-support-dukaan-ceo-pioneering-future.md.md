@@ -13,7 +13,7 @@ tags: [AI, chatbots, customer-support, business-efficiency, automation]
 
 ---
 
-# CEO Embraces AI, Slashing Customer Support Costs by 85%
+## CEO Embraces AI, Slashing Customer Support Costs by 85%
 
 Suumit Shah, the forward-thinking CEO of India-based e-commerce leader Dukaan, has showcased the future of efficient business operations by leveraging the capabilities of AI chatbots. His recent strategic shift has not only optimized the company's customer support but also led to a staggering reduction in costs.
 

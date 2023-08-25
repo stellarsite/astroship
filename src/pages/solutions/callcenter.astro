@@ -12,51 +12,109 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 ---
 
-<Layout title="Solutions">
+<Layout title="AI Call Center Solutions">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">
-        AI Call Center Bots: Revolutionizing Phone Support
-      </Fragment>
+      <Fragment slot="title">Introducing AI-Driven Call Center Bots</Fragment>
       <Fragment slot="desc">
-        Discover the future of customer support with AI-powered phone bots.
+        Empower your business with cutting-edge AI bots to handle customer
+        calls. Streamline operations and save significantly on phone support
+        costs.
       </Fragment>
     </Sectionhead>
 
-    vbnet
+    <div class="flex flex-col gap-6 mx-auto max-w-5xl mt-16">
+      <!-- Service Overview -->
+      <h2 class="font-bold text-3xl text-gray-800">Service Overview</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Our AI Call Center Bots are designed to function like a traditional call
+        center agent but with the efficiency, consistency, and availability that
+        only AI can offer. Customers receive a seamless experience that
+        includes:
+        <ul class="list-disc ml-6 mt-2">
+          <li>Personalized call responses tailored to your business needs.</li>
+          <li>24/7 availability, ensuring no call goes unanswered.</li>
+          <li>
+            Integration with CRM tools for real-time customer data access.
+          </li>
+          <li>Upgrades and training as per changing business requirements.</li>
+        </ul>
+      </p>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <!-- Problem Solving -->
+      <h2 class="font-bold text-3xl text-gray-800">The Issue at Hand</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Traditional call centers demand substantial resources — from hiring and
+        training staff to managing operational costs. Our solution drastically
+        reduces these expenses, optimizes response times, and eliminates human
+        errors, thus enhancing the customer experience.
+      </p>
+
+      <!-- Ideal Customer -->
+      <h2 class="font-bold text-3xl text-gray-800">Is This for You?</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Our AI bots are perfect for businesses aiming to modernize their
+        customer support. If you're facing high call volumes, struggling with
+        operational costs, or simply want a scalable solution that grows with
+        your needs, this is the game-changer you've been waiting for.
+      </p>
+
+      <!-- Long-Term Benefits -->
+      <h2 class="font-bold text-3xl text-gray-800">Look to the Future</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Investing in our AI Call Center Bots ensures long-term benefits:
+        <ul class="list-disc ml-6 mt-2">
+          <li>Consistent savings of up to 80% on phone support bills.</li>
+          <li>Enhanced customer satisfaction due to reduced wait times.</li>
+          <li>
+            Flexibility to redirect human resources to more strategic tasks.
+          </li>
+          <li>Staying ahead of the curve in customer service innovation.</li>
+        </ul>
+      </p>
+
+      <!-- Brand Backstory -->
+      <h2 class="font-bold text-3xl text-gray-800">Our Journey & Expertise</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Born from a passion to revolutionize customer interactions, our team
+        comprises AI experts with over a decade of experience. From early
+        chatbots to advanced call handling systems, we've witnessed the
+        transformative power of AI in businesses. Our expertise ensures that
+        you're not just investing in a tool but a partnership that prioritizes
+        your growth.
+      </p>
+
+      <!-- FAQs -->
       <h2 class="font-bold text-3xl text-gray-800">
-        Cost-Efficient Call Handling
+        Frequently Asked Questions
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        With AI call center bots, businesses can significantly cut down on
-        operational costs, saving up to 80% on phone support bills by replacing
-        traditional call center roles.
-      </p>
+      <div class="mt-2">
+        <p class="font-semibold text-lg">
+          Q: How long does it take to integrate the bots into our system?
+        </p>
+        <p class="text-lg leading-relaxed text-slate-500">
+          A: Typically, integration takes 2-4 weeks, depending on your system's
+          complexity.
+        </p>
 
-      <h2 class="font-bold text-3xl text-gray-800">24/7 Seamless Support</h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Never miss a call. Our AI bots are designed to handle inquiries around
-        the clock, ensuring that customers always have a line of support when
-        they need it.
-      </p>
+        <p class="font-semibold text-lg mt-4">
+          Q: Can the bot handle multiple languages?
+        </p>
+        <p class="text-lg leading-relaxed text-slate-500">
+          A: Yes, our bots are multilingual and can be customized for various
+          languages.
+        </p>
 
-      <h2 class="font-bold text-3xl text-gray-800">Adaptable & Customizable</h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        AI call bots can be tailored to meet the specific needs of your business
-        and industry. Whether it's for bookings, technical support, or general
-        inquiries, our bots have got you covered.
-      </p>
-
-      <h2 class="font-bold text-3xl text-gray-800">Human-like Interactions</h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        With advanced natural language processing, our bots not only understand
-        customer queries but also respond in a human-like manner, ensuring a
-        smooth experience for the caller.
-      </p>
+        <p class="font-semibold text-lg mt-4">
+          Q: What if a customer wants to speak to a human agent?
+        </p>
+        <p class="text-lg leading-relaxed text-slate-500">
+          A: The bot is designed to seamlessly transfer calls to human agents
+          upon request or if it detects complex queries.
+        </p>
+      </div>
     </div>
-    <Newsletter />
+
     <Cta />
   </Container>
 </Layout>

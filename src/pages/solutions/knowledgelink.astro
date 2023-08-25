@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Cta from "@components/cta.astro";
+import Newsletter from "@components/newsletter.astro";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -38,6 +39,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         Utilize smart tools like ChatGPT for tasks such as summarizing data, responding to payments, and preparing contracts. Optimize, automate, and elevate your business processes.
       </p>
     </div>
+    <Newsletter/>
 
     <Cta/>
   </Container>

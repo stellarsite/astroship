@@ -1,0 +1,7 @@
+# netlify.toml
+
+[[headers]]
+  # Define for which paths this should apply. Use "/*" for all paths.
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "all"

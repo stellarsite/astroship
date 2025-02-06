@@ -1,11 +1,10 @@
 ---
-import "../styles/globals.css";
 import Layout from "@layouts/Layout.astro";
 import ContactForm from "@components/contactform.astro";
 import { HeroWithForm } from "@components/ui/hero-with-form";
 ---
 
-<Layout title="Efficiency Era" simpleNav={true}>
+<Layout title="Efficiency Era" simpleNav={true} useBackground={true}>
   <HeroWithForm client:load>
     <ContactForm />
   </HeroWithForm>

@@ -10,7 +10,8 @@ module.exports = {
   				'Inter Variable',
   				'Inter',
                     ...defaultTheme.fontFamily.sans
-                ]
+                ],
+            staatliches: ['Staatliches', 'serif']
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

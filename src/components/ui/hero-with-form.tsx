@@ -15,8 +15,8 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                 <div className="w-full max-w-xl mx-auto">
                     <div className="text-center relative z-10">
                         <div className="absolute -inset-x-[100vw] -inset-y-[50vh] -z-10">
-                            <div className="absolute inset-0 backdrop-blur-xl [mask-image:radial-gradient(15%_15%_at_50%_50%,black_40%,transparent_100%)]" />
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent  [mask-image:radial-gradient(15%_15%_at_50%_50%,black_40%,transparent_100%)]" />
+                            <div className="absolute inset-0 backdrop-blur-md md:backdrop-blur-xl [mask-image:radial-gradient(15%_15%_at_50%_50%,black_40%,transparent_100%)]" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 md:via-white/40 to-transparent [mask-image:radial-gradient(15%_15%_at_50%_50%,black_40%,transparent_100%)]" />
                         </div>
                         <motion.div
                             initial={{ opacity: 0, y: 0 }}
@@ -24,7 +24,7 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                             transition={{ duration: 1 }}
                         >
                             <div className="relative z-10">
-                                <h1 className="text-4xl uppercase md:text-5xl font-extrabold scale-y-110 scale-x-90 mb-6 md:mb-8 text-black">
+                                <h1 className="text-5xl uppercase md:text-7xl font-staatliches mb-6 md:mb-8 text-black">
                                     {words.map((word, wordIndex) => (
                                         <span
                                             key={wordIndex}
@@ -33,14 +33,14 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                                             {word.split("").map((letter, letterIndex) => (
                                                 <motion.span
                                                     key={`${wordIndex}-${letterIndex}`}
-                                                    initial={{ y: 100, opacity: 0 }}
+                                                    initial={{ y: 20, opacity: 0 }}
                                                     animate={{ y: 0, opacity: 1 }}
                                                     transition={{
                                                         delay:
                                                             wordIndex * 0.1 +
                                                             letterIndex * 0.03,
                                                         type: "spring",
-                                                        stiffness: 150,
+                                                        stiffness: 100,
                                                         damping: 25,
                                                     }}
                                                     className="inline-block"
@@ -57,7 +57,7 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5, duration: 0.8 }}
-                                    className="text-base px-8 md:text-lg text-neutral-700 dark:text-neutral-300 mb-8 md:mb-12"
+                                    className="text-base px-8 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-8 md:mb-12 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
                                 >
                                     Step into a new era where AI-driven solutions revolutionize how businesses operate. We're pioneering breakthrough technologies that transform outdated business processes into powerful, automated workflows.
                                 </motion.p>
@@ -67,13 +67,13 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.7, duration: 0.8 }}
-                                    className="text-base px-8 md:text-lg  text-neutral-700 dark:text-neutral-300 mb-8 md:mb-12"
+                                    className="text-base px-8 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-8 md:mb-12 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
                                 >
                                     While we're crafting our suite of specialized solutions, we invite you to be among the first to experience the power of AI automation. Share your email below, and we'll reach out personally to discuss opportunities tailored to your business.
                                 </motion.p>
                             </div>
                             <div className="relative z-10 max-w-md mx-auto">
-                                <div className="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-lg rounded-none p-2 shadow-lg border border-white/20 dark:border-neutral-800/30">
+                                <div className="bg-white/80 md:bg-white/40 dark:bg-neutral-900/80 md:dark:bg-neutral-900/40 backdrop-blur-xl md:backdrop-blur-lg rounded-none p-2 shadow-lg border border-white/20 dark:border-neutral-800/30">
                                     {children}
                                 </div>
                             </div>

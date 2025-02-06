@@ -1,6 +1,7 @@
 "use client"
 
-import { ReactNode, RefObject, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
+import type { ReactNode, RefObject } from "react"
 import { ChevronUp, Loader } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
 
@@ -114,7 +115,7 @@ export function PopoverFormButton({
   return (
     <button
       type="submit"
-      className="ml-auto flex h-6 w-26 items-center justify-center overflow-hidden rounded-md bg-gradient-to-b from-primary/90 to-primary px-3 text-xs font-semibold text-primary-foreground shadow-[0_0_1px_1px_rgba(255,255,255,0.08)_inset,0_1px_1.5px_0_rgba(0,0,0,0.32),0_0_0_0.5px_#1a94ff]"
+      className="ml-auto flex h-6 w-24 items-center justify-center overflow-hidden rounded-md bg-gradient-to-b from-primary/90 to-primary px-3 text-xs font-semibold text-primary-foreground shadow-[0_0_1px_1px_rgba(255,255,255,0.08)_inset,0_1px_1.5px_0_rgba(0,0,0,0.32),0_0_0_0.5px_#1a94ff]"
     >
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.span
@@ -130,7 +131,7 @@ export function PopoverFormButton({
           className="flex w-full items-center justify-center"
         >
           {loading ? (
-            <Loader className="animate-spin size-3" />
+            <Loader className="animate-spin w-3 h-3" />
           ) : (
             <span>{text}</span>
           )}
@@ -188,7 +189,7 @@ export function PopoverFormSuccess({
         />
       </svg>
       <h3 className="mb-1 mt-2 text-sm font-medium text-primary">{title}</h3>
-      <p className="text-sm text-muted-foreground max-w-xs text-pretty mx-auto text-center">
+      <p className="text-sm text-muted-foreground max-w-xs text-balance mx-auto text-center">
         {description}
       </p>
     </>
@@ -240,7 +241,7 @@ function PopoverFormCutOutTopIcon({
       className="rotate-90 mt-[1px]"
       preserveAspectRatio="none"
     >
-      <g clipPath="url(#clip0_2029_22)">
+      <g clipPath="url(#clip0_2029_22_top)">
         <path
           d="M0 2C0.656613 2 1.30679 2.10346 1.91341 2.30448C2.52005 2.5055 3.07124 2.80014 3.53554 3.17157C3.99982 3.54301 4.36812 3.98396 4.6194 4.46927C4.87067 4.95457 5 5.47471 5 6C5 6.52529 4.87067 7.04543 4.6194 7.53073C4.36812 8.01604 3.99982 8.45699 3.53554 8.82843C3.07124 9.19986 2.52005 9.4945 1.91341 9.69552C1.30679 9.89654 0.656613 10 0 10V6V2Z"
           className="fill-muted"
@@ -253,7 +254,7 @@ function PopoverFormCutOutTopIcon({
         />
       </g>
       <defs>
-        <clipPath id="clip0_2029_22">
+        <clipPath id="clip0_2029_22_top">
           <rect width={finalWidth} height={finalHeight} fill="white" />
         </clipPath>
       </defs>
@@ -270,7 +271,7 @@ export function PopoverFormCutOutLeftIcon() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clipPath="url(#clip0_2029_22)">
+      <g clipPath="url(#clip0_2029_22_left)">
         <path
           d="M0 2C0.656613 2 1.30679 2.10346 1.91341 2.30448C2.52005 2.5055 3.07124 2.80014 3.53554 3.17157C3.99982 3.54301 4.36812 3.98396 4.6194 4.46927C4.87067 4.95457 5 5.47471 5 6C5 6.52529 4.87067 7.04543 4.6194 7.53073C4.36812 8.01604 3.99982 8.45699 3.53554 8.82843C3.07124 9.19986 2.52005 9.4945 1.91341 9.69552C1.30679 9.89654 0.656613 10 0 10V6V2Z"
           className="fill-muted"
@@ -283,7 +284,7 @@ export function PopoverFormCutOutLeftIcon() {
         />
       </g>
       <defs>
-        <clipPath id="clip0_2029_22">
+        <clipPath id="clip0_2029_22_left">
           <rect width="6" height="12" fill="white" />
         </clipPath>
       </defs>
@@ -300,7 +301,7 @@ export function PopoverFormCutOutRightIcon() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clipPath="url(#clip0_2029_22)">
+      <g clipPath="url(#clip0_2029_22_right)">
         <path
           d="M0 2C0.656613 2 1.30679 2.10346 1.91341 2.30448C2.52005 2.5055 3.07124 2.80014 3.53554 3.17157C3.99982 3.54301 4.36812 3.98396 4.6194 4.46927C4.87067 4.95457 5 5.47471 5 6C5 6.52529 4.87067 7.04543 4.6194 7.53073C4.36812 8.01604 3.99982 8.45699 3.53554 8.82843C3.07124 9.19986 2.52005 9.4945 1.91341 9.69552C1.30679 9.89654 0.656613 10 0 10V6V2Z"
           className="fill-muted"
@@ -313,7 +314,7 @@ export function PopoverFormCutOutRightIcon() {
         />
       </g>
       <defs>
-        <clipPath id="clip0_2029_22">
+        <clipPath id="clip0_2029_22_right">
           <rect width="6" height="12" fill="white" />
         </clipPath>
       </defs>

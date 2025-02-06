@@ -69,7 +69,7 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                                     transition={{ delay: 0.7, duration: 0.8 }}
                                     className="text-base px-8 md:text-lg  text-neutral-700 dark:text-neutral-300 mb-8 md:mb-12"
                                 >
-                                    While we're crafting our suite of specialized solutions, we invite you to be among the first to experience the power of AI transformation. Share your email below, and we'll reach out personally to discuss AI opportunities tailored to your business.
+                                    While we're crafting our suite of specialized solutions, we invite you to be among the first to experience the power of AI automation. Share your email below, and we'll reach out personally to discuss opportunities tailored to your business.
                                 </motion.p>
                             </div>
                             <div className="relative z-10 max-w-md mx-auto">

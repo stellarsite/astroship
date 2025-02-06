@@ -1,17 +1,12 @@
 ---
-import Container from "@components/container.astro";
-import Cta from "@components/cta.astro";
-import Features from "@components/features.astro";
-import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
+import "../styles/globals.css";
 import Layout from "@layouts/Layout.astro";
+import ContactForm from "@components/contactform.astro";
+import { HeroWithForm } from "@components/ui/hero-with-form";
 ---
 
-<Layout title="">
-  <Container>
-    <Hero />
-    <Features />
-    <Logos />
-    <Cta />
-  </Container>
+<Layout title="Efficiency Era" simpleNav={true}>
+  <HeroWithForm client:load>
+    <ContactForm />
+  </HeroWithForm>
 </Layout>

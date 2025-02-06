@@ -1,0 +1,26 @@
+/* Base styles for gears */
+.logo-svg #c .h path, 
+.logo-svg #e {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* Animation states */
+.logo-svg.animating #c .h path {
+  animation: gear-clockwise 4s ease-out forwards;
+}
+
+.logo-svg.animating #e {
+  animation: gear-counterclockwise 4s ease-out forwards;
+}
+
+/* Animation keyframes */
+@keyframes gear-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(90deg); }
+}
+
+@keyframes gear-counterclockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}

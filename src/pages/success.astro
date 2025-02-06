@@ -1,0 +1,45 @@
+---
+import "../styles/globals.css";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import { motion } from "framer-motion";
+---
+
+<Layout title="Success" simpleNav={true}>
+  <section class="flex items-center justify-center min-h-[calc(100vh-8rem)]">
+    <Container class="text-center relative z-10">
+      <div class="absolute -inset-x-[100vw] -inset-y-[50vh] -z-10">
+        <div class="absolute inset-0 backdrop-blur-xl [mask-image:radial-gradient(15%_15%_at_50%_50%,black_40%,transparent_100%)]" />
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent dark:via-neutral-900/40 [mask-image:radial-gradient(15%_15%_at_50%_50%,black_40%,transparent_100%)]" />
+      </div>
+      <motion.h1
+        client:load
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl font-bold mb-4 text-neutral-800 dark:text-white"
+      >
+        Thank You!
+      </motion.h1>
+      <motion.p
+        client:load
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="text-lg text-neutral-700 dark:text-neutral-300"
+      >
+        Your message has been submitted successfully.
+      </motion.p>
+      <motion.a
+        client:load
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
+        href="/"
+        className="inline-block mt-6 px-6 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+      >
+        Back to Home
+      </motion.a>
+    </Container>
+  </section>
+</Layout>

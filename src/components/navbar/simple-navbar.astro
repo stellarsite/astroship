@@ -1,0 +1,38 @@
+---
+import logo from "../../assets/EfficiencyEraLogo.svg?raw";
+---
+
+<header class="flex flex-col items-center lg:flex-row justify-center py-5 px-4 gap-3">
+  <a href="/" class="flex items-center logo-container group" aria-label="Efficiency Era homepage">
+    <div set:html={logo.replace('<svg', '<svg class="logo-svg"')} class="w-[298px] h-[64px]" />
+  </a>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.querySelector('.logo-svg');
+    if (!logo) return;
+    
+    let isAnimating = false;
+    
+    const startAnimation = () => {
+      if (!isAnimating) {
+        isAnimating = true;
+        logo.classList.add('animating');
+        setTimeout(() => {
+          isAnimating = false;
+          logo.classList.remove('animating');
+        }, 4000); // Match animation duration
+      }
+    };
+
+    // Initial animation
+    startAnimation();
+
+    // Hover animation
+    const container = logo.parentElement;
+    if (container) {
+      container.addEventListener('mouseenter', startAnimation);
+    }
+  });
+</script>

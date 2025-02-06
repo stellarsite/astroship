@@ -16,7 +16,7 @@ export function BackgroundLayout({ children }: BackgroundLayoutProps) {
                 <FloatingPaths position={-2} />
 
             </div>
-            <div className="relative z-10">
+            <div className="relative z-10 flex flex-col min-h-screen">
                 {children}
             </div>
         </div>

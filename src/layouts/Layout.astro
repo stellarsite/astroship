@@ -77,20 +77,24 @@ const makeTitle = title
       }}
     />
   </head>
-  <body class="min-h-screen">
+  <body>
     {
       Astro.props.useBackground ? (
         <BackgroundLayout client:load>
           {Astro.props.simpleNav ? <SimpleNavbar /> : <Navbar />}
-          <slot />
+          <main class="flex-1">
+            <slot />
+          </main>
           <Footer />
         </BackgroundLayout>
       ) : (
-        <>
+        <div class="min-h-screen flex flex-col">
           {Astro.props.simpleNav ? <SimpleNavbar /> : <Navbar />}
-          <slot />
+          <main class="flex-1">
+            <slot />
+          </main>
           <Footer />
-        </>
+        </div>
       )
     }
     <style is:global>

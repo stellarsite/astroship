@@ -14,6 +14,7 @@ type PopoverFormProps = {
   showCloseButton?: boolean
   title: string
   className?: string
+  show?: boolean
 }
 
 function PopoverForm({
@@ -25,6 +26,7 @@ function PopoverForm({
   title = "Feedback",
   showCloseButton = false,
   className = "",
+  show = false,
 }: PopoverFormProps) {
   const ref = useRef<HTMLDivElement>(null)
   useClickOutside(ref, () => setOpen(false))
@@ -37,7 +39,10 @@ function PopoverForm({
       <motion.button
         layoutId={`${title}-wrapper`}
         onClick={() => setOpen(true)}
-        style={{ borderRadius: 8 }}
+        style={{ borderRadius: 2 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: show ? 1 : 0, y: show ? 0 : 20 }}
+        transition={{ type: "spring", duration: 0.8, bounce: 0 }}
         className="flex h-9 items-center border bg-black text-white dark:bg-[#121212] px-3 text-sm font-medium outline-none"
       >
         <motion.span layoutId={`${title}-title`}>{title}</motion.span>
@@ -46,9 +51,9 @@ function PopoverForm({
         {open && (
           <motion.div
             layoutId={`${title}-wrapper`}
-            className={`absolute overflow-hidden bg-muted shadow-[0_0_0_1px_rgba(0,0,0,0.08),0px_1px_2px_rgba(0,0,0,0.04)] outline-none min-w-[300px] max-w-[95vw] min-h-[100px] ${className}`}
+            className={`absolute overflow-hidden bg-transparent shadow-[0_0_0_1px_rgba(0,0,0,0.08),0px_1px_2px_rgba(0,0,0,0.04)] outline-none min-w-[300px] max-w-[95vw] min-h-[100px] ${className}`}
             ref={ref}
-            style={{ borderRadius: 10 }}
+            style={{ borderRadius: 2 }}
           >
             <motion.span
               aria-hidden
@@ -89,8 +94,8 @@ function PopoverForm({
                   exit={{ y: 8, opacity: 0, filter: "blur(4px)" }}
                   transition={{ type: "spring", duration: 0.4, bounce: 0 }}
                   key="open-child"
-                  style={{ borderRadius: 10 }}
-                  className="w-full min-h-[100px] border bg-white z-20"
+                  style={{ borderRadius: 2 }}
+                  className="w-full min-h-[100px] border bg-white/60 backdrop-blur-lg z-20"
                 >
                   {openChild}
                 </motion.div>
@@ -113,7 +118,7 @@ export function PopoverFormButton({
   return (
     <button
       type="submit"
-      className="ml-auto flex h-9 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-b from-primary/90 to-primary px-3 text-xs font-semibold text-white shadow-[0_0_1px_1px_rgba(255,255,255,0.08)_inset,0_1px_1.5px_0_rgba(0,0,0,0.32),0_0_0_0.5px_#1a94ff]"
+      className="ml-auto flex h-9 w-full items-center justify-center overflow-hidden bg-gradient-to-b from-primary/90 to-primary px-3 text-xs font-semibold text-white shadow-[0_0_1px_1px_rgba(255,255,255,0.08)_inset,0_1px_1.5px_0_rgba(0,0,0,0.32),0_0_0_0.5px_#1a94ff]"
     >
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.span

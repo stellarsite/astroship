@@ -11,7 +11,7 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
 
     return (
         <div className="relative overflow-hidden">
-            <div className="container mx-auto px-4 md:px-6 py-8 md:py-16 flex flex-col justify-center">
+            <div className="container mx-auto px-4 md:px-6 py-8 md:py-8 flex flex-col justify-center">
                 <div className="w-full max-w-xl mx-auto">
                     <div className="text-center relative z-10">
                         <div className="absolute -inset-x-[100vw] -inset-y-[50vh] -z-10">
@@ -57,7 +57,7 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5, duration: 0.8 }}
-                                    className="text-base px-8 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-4 md:mb-12 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
+                                    className="text-base px-6 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-4 md:mb-8 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
                                 >
                                     We leverage breakthrough AI technologies to achieve unprecedented operational efficiencies. Through strategic implementation of artificial intelligence, we deliver transformative results that redefine industry standards—achieving levels of performance previously considered impossible.                                </motion.p>
                             </div>
@@ -66,9 +66,9 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.7, duration: 0.8 }}
-                                    className="text-base px-8 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-2 md:mb-12 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
+                                    className="text-base px-6 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-4 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
                                 >
-Our core solutions are on the horizon, but we're actively seeking partners in unique business domains to co-create bespoke AI solutions. Provide your email below, and we'll be in touch to discuss your specific needs and explore a collaboration.                           </motion.p>
+                                    Our core solutions are on the horizon, but we're actively seeking partners in unique business domains to co-create bespoke AI solutions. Provide your email below, and we'll be in touch to discuss your specific needs and explore a collaboration.                           </motion.p>
                             </div>
                             <div className="relative z-10 max-w-md mx-auto flex justify-center">
                                 {children}

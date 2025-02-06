@@ -11,7 +11,7 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
 
     return (
         <div className="relative overflow-hidden">
-            <div className="container mx-auto px-4 md:px-6 min-h-[calc(100vh-16rem)] py-8 md:py-16 flex flex-col justify-center">
+            <div className="container mx-auto px-4 md:px-6 py-8 md:py-16 flex flex-col justify-center">
                 <div className="w-full max-w-xl mx-auto">
                     <div className="text-center relative z-10">
                         <div className="absolute -inset-x-[100vw] -inset-y-[50vh] -z-10">
@@ -51,31 +51,27 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                                         </span>
                                     ))}
                                 </h1>
-                            </div> 
+                            </div>
                             <div className="relative z-10">
-                                <motion.p 
+                                <motion.p
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5, duration: 0.8 }}
-                                    className="text-base px-8 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-8 md:mb-12 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
+                                    className="text-base px-8 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-4 md:mb-12 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
                                 >
-                                    Step into a new era where AI-driven solutions revolutionize how businesses operate. We're pioneering breakthrough technologies that transform outdated business processes into powerful, automated workflows.
-                                </motion.p>
+                                    We leverage breakthrough AI technologies to achieve unprecedented operational efficiencies. Through strategic implementation of artificial intelligence, we deliver transformative results that redefine industry standards—achieving levels of performance previously considered impossible.                                </motion.p>
                             </div>
                             <div className="relative z-10">
                                 <motion.p
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.7, duration: 0.8 }}
-                                    className="text-base px-8 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-8 md:mb-12 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
+                                    className="text-base px-8 md:text-lg text-neutral-900 md:text-neutral-700 dark:text-neutral-200 md:dark:text-neutral-300 mb-2 md:mb-12 [text-shadow:0_0_1px_rgba(255,255,255,0.5)] md:[text-shadow:none]"
                                 >
-                                    While we're crafting our suite of specialized solutions, we invite you to be among the first to experience the power of AI automation. Share your email below, and we'll reach out personally to discuss opportunities tailored to your business.
-                                </motion.p>
+Our core solutions are on the horizon, but we're actively seeking partners in unique business domains to co-create bespoke AI solutions. Provide your email below, and we'll be in touch to discuss your specific needs and explore a collaboration.                           </motion.p>
                             </div>
-                            <div className="relative z-10 max-w-md mx-auto">
-                                <div className="bg-white/80 md:bg-white/40 dark:bg-neutral-900/80 md:dark:bg-neutral-900/40 backdrop-blur-xl md:backdrop-blur-lg rounded-none p-2 shadow-lg border border-white/20 dark:border-neutral-800/30">
-                                    {children}
-                                </div>
+                            <div className="relative z-10 max-w-md mx-auto flex justify-center">
+                                {children}
                             </div>
                         </motion.div>
                     </div>

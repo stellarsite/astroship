@@ -11,10 +11,9 @@ type PopoverFormProps = {
   openChild?: ReactNode
   successChild?: ReactNode
   showSuccess: boolean
-  width?: string
-  height?: string
   showCloseButton?: boolean
   title: string
+  className?: string
 }
 
 function PopoverForm({
@@ -23,10 +22,9 @@ function PopoverForm({
   openChild,
   showSuccess,
   successChild,
-  width = "364px",
-  height = "192px",
   title = "Feedback",
   showCloseButton = false,
+  className = "",
 }: PopoverFormProps) {
   const ref = useRef<HTMLDivElement>(null)
   useClickOutside(ref, () => setOpen(false))
@@ -34,13 +32,13 @@ function PopoverForm({
   return (
     <div
       key={title}
-      className="flex min-h-[300px] w-full items-center justify-center"
+      className="flex min-h-[100px] w-full items-center justify-center"
     >
       <motion.button
         layoutId={`${title}-wrapper`}
         onClick={() => setOpen(true)}
         style={{ borderRadius: 8 }}
-        className="flex h-9 items-center border bg-white dark:bg-[#121212] px-3 text-sm font-medium outline-none"
+        className="flex h-9 items-center border bg-black text-white dark:bg-[#121212] px-3 text-sm font-medium outline-none"
       >
         <motion.span layoutId={`${title}-title`}>{title}</motion.span>
       </motion.button>
@@ -48,9 +46,9 @@ function PopoverForm({
         {open && (
           <motion.div
             layoutId={`${title}-wrapper`}
-            className="absolute p-1 overflow-hidden bg-muted shadow-[0_0_0_1px_rgba(0,0,0,0.08),0px_1px_2px_rgba(0,0,0,0.04)] outline-none"
+            className={`absolute overflow-hidden bg-muted shadow-[0_0_0_1px_rgba(0,0,0,0.08),0px_1px_2px_rgba(0,0,0,0.04)] outline-none min-w-[300px] max-w-[95vw] min-h-[100px] ${className}`}
             ref={ref}
-            style={{ borderRadius: 10, width, height }}
+            style={{ borderRadius: 10 }}
           >
             <motion.span
               aria-hidden
@@ -82,7 +80,7 @@ function PopoverForm({
                   initial={{ y: -32, opacity: 0, filter: "blur(4px)" }}
                   animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
                   transition={{ type: "spring", duration: 0.4, bounce: 0 }}
-                  className="flex h-full flex-col items-center justify-center"
+                  className="flex w-full min-h-[100px] flex-col items-center justify-center p-4"
                 >
                   {successChild || <PopoverFormSuccess />}
                 </motion.div>
@@ -92,7 +90,7 @@ function PopoverForm({
                   transition={{ type: "spring", duration: 0.4, bounce: 0 }}
                   key="open-child"
                   style={{ borderRadius: 10 }}
-                  className="h-full border bg-white dark:bg-[#121212] z-20 "
+                  className="w-full min-h-[100px] border bg-white z-20"
                 >
                   {openChild}
                 </motion.div>
@@ -115,7 +113,7 @@ export function PopoverFormButton({
   return (
     <button
       type="submit"
-      className="ml-auto flex h-6 w-24 items-center justify-center overflow-hidden rounded-md bg-gradient-to-b from-primary/90 to-primary px-3 text-xs font-semibold text-primary-foreground shadow-[0_0_1px_1px_rgba(255,255,255,0.08)_inset,0_1px_1.5px_0_rgba(0,0,0,0.32),0_0_0_0.5px_#1a94ff]"
+      className="ml-auto flex h-9 w-full items-center justify-center overflow-hidden rounded-md bg-gradient-to-b from-primary/90 to-primary px-3 text-xs font-semibold text-white shadow-[0_0_1px_1px_rgba(255,255,255,0.08)_inset,0_1px_1.5px_0_rgba(0,0,0,0.32),0_0_0_0.5px_#1a94ff]"
     >
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.span

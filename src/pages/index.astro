@@ -1,11 +1,11 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import ContactForm from "@components/contactform.astro";
 import { HeroWithForm } from "@components/ui/hero-with-form";
+import { NetlifyPopoverForm } from "@components/ui/netlify-popover-form";
 ---
 
 <Layout title="Efficiency Era" simpleNav={true} useBackground={true}>
   <HeroWithForm client:load>
-    <ContactForm />
+    <NetlifyPopoverForm client:load />
   </HeroWithForm>
 </Layout>

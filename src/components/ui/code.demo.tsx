@@ -49,7 +49,7 @@ export function NewsletterSignupExample() {
         title="Newsletter Signup"
         open={open}
         setOpen={setOpen}
-        width="320px"
+        className="w-[320px]"
         showCloseButton={formState !== "success"}
         showSuccess={formState === "success"}
         openChild={
@@ -132,8 +132,7 @@ export function ColorThemeSwitcherExample() {
         title="Choose theme"
         open={open}
         setOpen={setOpen}
-        width="200px"
-        height="175px"
+        className="w-[200px] h-[175px]"
         showCloseButton={true}
         openChild={
           <div className="p-2">
@@ -210,8 +209,7 @@ export function FeedbackFormExample() {
         title="Feedback"
         open={open}
         setOpen={setOpen}
-        width="364px"
-        height="192px"
+        className="w-[364px] h-[192px]"
         showCloseButton={formState !== "success"}
         showSuccess={formState === "success"}
         openChild={
@@ -287,8 +285,7 @@ export function ContactFormExample() {
         title="Click Here"
         open={open}
         setOpen={setOpen}
-        width="364px"
-        height="372px"
+        className="w-[364px] h-[372px]"
         showCloseButton={formState !== "success"}
         showSuccess={formState === "success"}
         openChild={

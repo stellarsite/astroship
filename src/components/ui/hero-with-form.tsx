@@ -24,7 +24,7 @@ export function HeroWithForm({ children }: HeroWithFormProps) {
                             transition={{ duration: 1 }}
                         >
                             <div className="relative z-10">
-                                <h1 className="text-4xl uppercase md:text-5xl font-bold scale-y-110 scale-x-90 mb-6 md:mb-8 text-black">
+                                <h1 className="text-4xl uppercase md:text-5xl font-extrabold scale-y-110 scale-x-90 mb-6 md:mb-8 text-black">
                                     {words.map((word, wordIndex) => (
                                         <span
                                             key={wordIndex}
